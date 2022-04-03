@@ -1,9 +1,10 @@
+import { Box } from '@mui/material';
 import React from 'react';
 
 const App = () => (
-  <div className="App">
+  <Box className="App">
     Works
-  </div>
+  </Box>
 );
 
 export default App;
