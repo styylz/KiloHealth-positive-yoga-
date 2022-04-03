@@ -154,6 +154,41 @@ const HomePage = () => (
         </Box>
       </Grid>
     </Grid>
+    <article className="questions">
+        <Box sx={{
+          py: '8px',
+          width: {
+            xs: '99%',
+            lg: '61%',
+          },
+          margin: 'auto',
+        }}
+        >
+
+          <Box>
+            <Typography
+              variant="h3"
+              sx={{
+                fontWeight: '600',
+                fontFamily: 'SF-PRO-DISPLAY-REGULAR',
+                fontStyle: 'normal',
+                fontSize: {
+                  xs: '20px',
+                  lg: '24px',
+                },
+                lineHeight: {
+                  xs: '28px',
+                  lg: '32px',
+                },
+                textAlign: 'center',
+                mb: 2,
+              }}
+            >
+              Frequently Asked Questions
+            </Typography>
+          </Box>
+
+        </Box>
   </main>
 );
 
