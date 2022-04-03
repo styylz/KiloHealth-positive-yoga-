@@ -20,11 +20,9 @@ const HomePage = () => (
     >
       <Grid item xs={12} lg={4}>
         <Discount>
-          <DiscountCard>
-            {subscriptionData.map((subscription) => (
-              <DiscountCard {...subscription} />
-            ))}
-          </DiscountCard>
+          {subscriptionData.map((subscription) => (
+            <DiscountCard {...subscription} />
+          ))}
         </Discount>
       </Grid>
 
