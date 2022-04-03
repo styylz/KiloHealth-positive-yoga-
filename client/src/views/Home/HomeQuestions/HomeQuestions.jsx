@@ -5,10 +5,13 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import StyledAccordion from './HomeQuestions.styles';
 
-const Questions = ({ title, description }) => (
+const Questions = ({
+  id, title, description, expanded, tooglePanel,
+}) => (
   <StyledAccordion
     square
-    expanded
+    onChange={tooglePanel(Number(id))}
+    expanded={expanded[Number(id)]}
     disableGutters
   >
     <AccordionSummary
