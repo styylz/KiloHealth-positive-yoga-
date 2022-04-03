@@ -1,4 +1,4 @@
-import { Box, Grid } from '@mui/material';
+import { Box, Grid, Typography } from '@mui/material';
 import React from 'react';
 import DiscountCard from '../../../components/card/DiscountCard/DiscountCard';
 import Discount from '../../../components/layout/discount-area/Discount';
@@ -29,8 +29,31 @@ const HomePage = () => (
       <Grid item xs={12} lg={4}>
         <FitProgram />
       </Grid>
-
     </Grid>
+
+    <Box sx={{
+      textAlign: {
+        xs: 'left',
+        lg: 'center',
+      },
+    }}
+    >
+      <Typography
+        variant="h3"
+        sx={{
+          fontWeight: '700',
+          lineHeight: '28px',
+          fontFamily: 'SF-PRO-DISPLAY-REGULAR',
+          fontStyle: 'normal',
+          color: '#22222C',
+          fontSize: {
+            lg: '24px',
+          },
+        }}
+      >
+        Hear success stories from our clients
+      </Typography>
+    </Box>
   </main>
 );
 
