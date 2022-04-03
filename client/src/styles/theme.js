@@ -24,6 +24,11 @@ const theme = createTheme({
       fontStyle: 'normal',
       letterSpacing: '-0.4 px',
     },
+    p: {
+      fontWeight: '400',
+      fontFamily: 'SF Pro Display',
+      fontStyle: 'normal',
+    },
 
   },
 });
@@ -58,6 +63,16 @@ const defaultTheme = createTheme(theme, {
       [theme.breakpoints.up('lg')]: {
         fontSize: '16px',
         lineHeight: '24px',
+      },
+    },
+    p: {
+      [theme.breakpoints.up('xs')]: {
+        fontSize: '14px',
+        lineHeight: '20px',
+      },
+      [theme.breakpoints.up('lg')]: {
+        fontSize: '14px',
+        lineHeight: '20px',
       },
     },
   },
