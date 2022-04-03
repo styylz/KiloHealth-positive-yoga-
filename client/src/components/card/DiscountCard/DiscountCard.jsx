@@ -24,8 +24,11 @@ const DiscountCard = ({
   >
     <Box sx={{
       position: 'absolute',
-      left: 120,
-      top: 13,
+      left: 113,
+      top: {
+        xs: 9,
+        lg: 13,
+      },
     }}
     >
       { discount
