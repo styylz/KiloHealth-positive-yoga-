@@ -1,7 +1,10 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
+import CardImage from './PersonCard.styles';
 
-const PersonCard = () => (
+const PersonCard = ({
+  name, age, location, description, image,
+}) => (
   <Box sx={{
     width: '323px',
     height: '607px',
@@ -32,9 +35,9 @@ const PersonCard = () => (
             // letterSpacing: '-0.4px',
           }}
         >
-          name
+          {name}
           ,
-          age
+          {age}
         </Typography>
         <Typography
           variant="p"
@@ -45,7 +48,7 @@ const PersonCard = () => (
             lineHeight: '20px',
           }}
         >
-          location
+          {location}
         </Typography>
       </Box>
       <Box sx={{
@@ -57,6 +60,8 @@ const PersonCard = () => (
         width: '20px',
       }}
       />
+      <CardImage myProp backgroundImage={image} />
+
       <Box>
         <Typography sx={{
           fontWeight: 'regular',
@@ -65,7 +70,7 @@ const PersonCard = () => (
           mixBlendMode: 'normal',
         }}
         >
-          description
+          {description}
         </Typography>
       </Box>
     </Box>

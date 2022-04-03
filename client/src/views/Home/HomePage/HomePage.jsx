@@ -1,4 +1,5 @@
 import { Box, Grid, Typography } from '@mui/material';
+import { SwiperSlide } from 'swiper/react';
 import React from 'react';
 import DiscountCard from '../../../components/card/DiscountCard/DiscountCard';
 import PersonCard from '../../../components/card/PersonCard/PersonCard';
@@ -6,6 +7,7 @@ import Discount from '../../../components/layout/discount-area/Discount';
 import ImageSwiper from '../../../components/swiper/ImageSwiper';
 import Title from '../../../components/Title/Title';
 import subscriptionData from '../../../data/subscriptionData';
+import personData from '../../../data/personData';
 import FitProgram from '../HomeFitProgram/HomeFitProgram';
 
 const HomePage = () => (
@@ -57,7 +59,13 @@ const HomePage = () => (
       </Typography>
     </Box>
     <ImageSwiper>
-      <PersonCard />
+      {
+        personData.map((userInfo) => (
+          <SwiperSlide>
+            <PersonCard {...userInfo} />
+          </SwiperSlide>
+        ))
+      }
     </ImageSwiper>
 
   </main>

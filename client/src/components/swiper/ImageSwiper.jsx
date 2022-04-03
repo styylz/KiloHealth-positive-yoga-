@@ -1,5 +1,5 @@
 import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper } from 'swiper/react';
 import 'swiper/swiper-bundle.min.css';
 import 'swiper/swiper.min.css';
 import styled from '@emotion/styled';
@@ -24,9 +24,7 @@ const ImageSwiper = ({ children }) => (
       },
     }}
   >
-    <SwiperSlide>
-      {children}
-    </SwiperSlide>
+    {children}
   </StyledSwiper>
 );
 export default ImageSwiper;
