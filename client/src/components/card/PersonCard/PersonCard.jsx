@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box, Rating, Typography } from '@mui/material';
 import CardImage from './PersonCard.styles';
 
 const PersonCard = ({
@@ -54,14 +54,17 @@ const PersonCard = ({
       <Box sx={{
         height: '54px',
       }}
-      />
+      >
+        <Rating name="read-only" value="5" readOnly />
+
+      </Box>
       <Box sx={{
         height: '169px',
         width: '20px',
       }}
-      />
-      <CardImage myProp backgroundImage={image} />
-
+      >
+        <CardImage myProp backgroundImage={image} />
+      </Box>
       <Box>
         <Typography sx={{
           fontWeight: 'regular',
