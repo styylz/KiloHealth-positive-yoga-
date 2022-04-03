@@ -13,6 +13,7 @@ import PrimaryButton from '../../../components/Button/PrimaryButton/PrimaryButto
 import Banner from '../HomeBanner/HomeBanner';
 import Benefits from '../HomeBenefits/HomeBenefits';
 import benefitsData from '../../../data/benefitsData';
+import questionsData from '../../../data/questionsData';
 import Questions from '../HomeQuestions/HomeQuestions';
 
 const HomePage = () => (
@@ -189,7 +190,7 @@ const HomePage = () => (
           Frequently Asked Questions
         </Typography>
       </Box>
-      <Questions />
+      {questionsData.map((question) => <Questions {...question} />)}
     </Box>
   </main>
 );

@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import StyledAccordion from './HomeQuestions.styles';
 
-const Questions = () => (
+const Questions = ({ title, description }) => (
   <StyledAccordion
     square
     expanded
@@ -14,11 +14,11 @@ const Questions = () => (
     <AccordionSummary
       expandIcon={<ExpandMoreIcon />}
     >
-      <Typography variant="h5">title</Typography>
+      <Typography variant="h5">{title}</Typography>
     </AccordionSummary>
     <AccordionDetails sx={{ padding: '0 16px 16px 16px' }}>
       <Typography>
-        description
+        {description}
       </Typography>
     </AccordionDetails>
   </StyledAccordion>
