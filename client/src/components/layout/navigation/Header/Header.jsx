@@ -7,20 +7,44 @@ import logo from '../../../../assets/Logo.png';
 const Header = () => (
   <>
     <S.Header>
-      <Box>
-        <img alt="badge" src={badge} />
-        <Typography sx={{
-          fontSize: '15px',
-          fontWeight: '600',
-          lineHeight: '20px',
-          // TODO: create another font
-          fontFamily: 'SF-PRO-DISPLAY-REGULAR',
-          fontStyle: 'normal',
-        }}
+      <Box sx={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '56px',
+      }}
+      >
+        <img width="20px" height="20px" alt="badge" src={badge} />
+        <Typography
+          component="p"
+          sx={{
+            fontSize: '15px',
+            fontWeight: '400',
+            lineHeight: '20px',
+            fontFamily: 'SF Pro Display',
+            letterSpacing: '0.5px',
+          }}
         >
-          <span>50%</span>
+          <Typography
+            component="span"
+            sx={{
+              fontWeight: '400',
+              mx: '8px',
+            }}
+          >
+            50%
+          </Typography>
           discount only valid for
-          <span>00:15:49</span>
+          <Typography
+            component="span"
+            sx={{
+              fontWeight: '400',
+              mx: '8px',
+            }}
+          >
+            00:15:49
+
+          </Typography>
         </Typography>
       </Box>
     </S.Header>
