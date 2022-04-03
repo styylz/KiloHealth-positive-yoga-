@@ -13,6 +13,7 @@ import PrimaryButton from '../../../components/Button/PrimaryButton/PrimaryButto
 import Banner from '../HomeBanner/HomeBanner';
 import Benefits from '../HomeBenefits/HomeBenefits';
 import benefitsData from '../../../data/benefitsData';
+import Questions from '../HomeQuestions/HomeQuestions';
 
 const HomePage = () => (
   <main>
@@ -188,7 +189,7 @@ const HomePage = () => (
           Frequently Asked Questions
         </Typography>
       </Box>
-
+      <Questions />
     </Box>
   </main>
 );
