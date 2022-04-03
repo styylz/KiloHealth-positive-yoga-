@@ -38,12 +38,8 @@ const PersonCard = ({
           {age}
         </Typography>
         <Typography
-          variant="p"
-          sx={{
-            fontWeight: 'regular',
-            fontSize: '12px',
-            lineHeight: '18px',
-          }}
+          component="figcaption"
+          variant="caption"
         >
           {location}
         </Typography>

@@ -47,13 +47,8 @@ const DiscountLayout = ({ children }) => (
       }}
       >
         <Typography
-          variant="p"
-          sx={{
-            fontStyle: 'normal',
-            fontWeight: '400',
-            fontSize: '12px',
-            lineHeight: '18px',
-          }}
+          component="figcaption"
+          variant="caption"
         >
           After 7 days free trial subscription payment is automatically charged
           from your account unless it is canceled at least 24 hours before
@@ -66,16 +61,8 @@ const DiscountLayout = ({ children }) => (
       }}
       >
         <Typography
-          variant="p"
-          sx={{
-          // TODO: change font family
-          // fontFamily: 'SF Pro Text';
-            fontStyle: 'normal',
-            fontWeight: '400',
-            fontSize: '12px',
-            lineHeight: '18px',
-          // #eff4fb
-          }}
+          component="figcaption"
+          variant="caption"
         >
           By choosing a payment method you agree to the
           <Typography

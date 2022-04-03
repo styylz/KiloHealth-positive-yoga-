@@ -102,12 +102,8 @@ const FitProgram = () => (
                   {title}
                 </Typography>
                 <Typography
-                  variant="p"
-                  sx={{
-                    fontSize: '12px',
-                    fontWeight: '400',
-                    lineHeight: '18px',
-                  }}
+                  component="figcaption"
+                  variant="caption"
                 >
                   {description}
                 </Typography>
