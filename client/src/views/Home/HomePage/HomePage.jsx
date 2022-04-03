@@ -114,10 +114,9 @@ const HomePage = () => (
             Start your yoga journey now!
           </Typography>
         </Box>
-      </Grid>
-      <Grid item xs={12} lg={5}>
         <Banner />
       </Grid>
+      <Grid item xs={12} lg={5} />
     </Grid>
   </main>
 );
