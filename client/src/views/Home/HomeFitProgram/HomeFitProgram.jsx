@@ -64,11 +64,7 @@ const FitProgram = () => (
   <>
     <Typography
       variant="h3"
-      sx={{
-        fontSize: '24px',
-        fontWeight: 'bold',
-        lineHeight: '32px',
-      }}
+      component="h3"
     >
       What's in my program?
     </Typography>
