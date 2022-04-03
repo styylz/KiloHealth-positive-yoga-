@@ -1,5 +1,6 @@
 import { Box, Grid } from '@mui/material';
 import React from 'react';
+import DiscountCard from '../../../components/card/DiscountCard/DiscountCard';
 import Discount from '../../../components/layout/discount-area/Discount';
 import Title from '../../../components/Title/Title';
 
@@ -17,7 +18,9 @@ const HomePage = () => (
       spacing={4}
     >
       <Grid item xs={12} lg={4}>
-        <Discount />
+        <Discount>
+          <DiscountCard />
+        </Discount>
       </Grid>
 
     </Grid>
