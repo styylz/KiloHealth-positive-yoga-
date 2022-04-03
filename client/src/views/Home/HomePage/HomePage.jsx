@@ -47,7 +47,7 @@ const HomePage = () => {
         <Grid item xs={12} lg={4}>
           <Discount>
             {subscriptionData.map((subscription) => (
-              <DiscountCard {...subscription} />
+              <DiscountCard key={subscription.id} {...subscription} />
             ))}
             <PrimaryButton>Get my plan</PrimaryButton>
           </Discount>
@@ -83,7 +83,7 @@ const HomePage = () => {
       <ImageSwiper>
         {
         personData.map((userInfo) => (
-          <SwiperSlide>
+          <SwiperSlide key={userInfo.id}>
             <PersonCard {...userInfo} />
           </SwiperSlide>
         ))
@@ -167,7 +167,7 @@ const HomePage = () => {
                 Is Positive Yoga right for me?
               </Typography>
             </Box>
-            {benefitsData.map((benefit) => <Benefits {...benefit} />)}
+            {benefitsData.map((benefit) => <Benefits key={benefit.id} {...benefit} />)}
           </Box>
         </Grid>
       </Grid>
@@ -207,6 +207,7 @@ const HomePage = () => {
         </Box>
         {questionsData.map((question) => (
           <Questions
+            key={question.id}
             expanded={expandedPanel}
             tooglePanel={handleChange}
             {...question}

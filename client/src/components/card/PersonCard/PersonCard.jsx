@@ -55,7 +55,7 @@ const PersonCard = ({
         height: '54px',
       }}
       >
-        <Rating name="read-only" value="5" readOnly />
+        <Rating name="read-only" value={5} readOnly />
 
       </Box>
       <Box sx={{
