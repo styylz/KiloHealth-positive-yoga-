@@ -181,6 +181,7 @@ const HomePage = () => (
               lg: '32px',
             },
             textAlign: 'center',
+            // TODO: delete later mb
             mb: 2,
           }}
         >
