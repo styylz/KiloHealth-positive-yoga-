@@ -69,10 +69,6 @@ const HomePage = () => {
         <Typography
           variant="h3"
           sx={{
-            fontWeight: '700',
-            lineHeight: '28px',
-            fontFamily: 'SF-PRO-DISPLAY-REGULAR',
-            fontStyle: 'normal',
             color: '#22222C',
             fontSize: {
               lg: '24px',
@@ -134,12 +130,6 @@ const HomePage = () => {
               sx={{
                 fontWeight: '600',
                 // TODO: create another font
-                fontFamily: 'SF-PRO-DISPLAY-REGULAR',
-                fontStyle: 'normal',
-                fontSize: {
-                  xs: '20',
-                  lg: '28px',
-                },
                 lineHeight: {
                   xs: '28px',
                   lg: '32px',
@@ -203,12 +193,8 @@ const HomePage = () => {
             variant="h3"
             sx={{
               fontWeight: '600',
-              fontFamily: 'SF-PRO-DISPLAY-REGULAR',
               fontStyle: 'normal',
-              fontSize: {
-                xs: '20px',
-                lg: '24px',
-              },
+
               lineHeight: {
                 xs: '28px',
                 lg: '32px',
@@ -218,7 +204,7 @@ const HomePage = () => {
               mb: 2,
             }}
           >
-            Frequently Asked Questions
+            Frequently Asked Questions!!!!!!!!!!!!
           </Typography>
         </Box>
         {questionsData.map((question) => (
