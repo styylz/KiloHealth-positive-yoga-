@@ -12,7 +12,10 @@ const DiscountCard = ({
       border: '2px solid rgba(0, 0, 0, 0.08)',
       padding: '0 16px',
       borderRadius: '16px',
-      height: '120px',
+      height: {
+        xs: '120px',
+        lg: '131px',
+      },
       position: 'relative',
       alignItems: 'center',
       mb: '8px',
@@ -21,7 +24,7 @@ const DiscountCard = ({
   >
     <Box sx={{
       position: 'absolute',
-      left: 100,
+      left: 120,
       top: 13,
     }}
     >
@@ -35,7 +38,10 @@ const DiscountCard = ({
     <Box sx={{
       display: 'flex',
       alignItems: 'center',
-      pt: '12px',
+      pt: {
+        xs: '14px',
+        lg: '16px',
+      },
 
     }}
     >
@@ -54,6 +60,10 @@ const DiscountCard = ({
 
         <Box sx={{
           mb: '4px',
+          pt: {
+            xs: '7px',
+            lg: '1px',
+          },
         }}
         >
           <Typography
@@ -76,38 +86,51 @@ const DiscountCard = ({
             </Typography>
           </Typography>
         </Box>
-        <Typography
-          variant="p"
-          sx={{
-            lineHeight: '20px',
-            fontSize: '14px',
-          }}
+        <Box sx={{
+          display: 'flex',
+        }}
         >
-          <Typography
-            variant="p"
-            sx={{
-              textDecoration: 'line-through',
-              fontWeight: 'bold',
-              fontSize: '14px',
-            }}
-          >
-            {oldPrice ? `$${oldPrice}` : ''}
+
+          <Typography component="p" variant="p">
+            <Typography
+              component="span"
+              variant="p"
+              sx={{
+                textDecoration: 'line-through',
+                fontWeight: 'bold',
+                fontSize: '14px',
+              }}
+            >
+              {oldPrice ? `$${oldPrice}` : ''}
+            </Typography>
+            <Typography
+              component="span"
+              variant="span"
+              sx={{
+                lineHeight: '20px',
+                fontWeight: 'bold',
+                fontSize: '14px',
+                color: (oldPrice && 'orange'),
+                ml: (oldPrice && '8px'),
+                mr: (oldPrice && '4px'),
+              }}
+            >
+              {currPrice ? `$${currPrice}` : ''}
+            </Typography>
+
           </Typography>
-          <Typography
-            variant="span"
-            sx={{
-              lineHeight: '20px',
-              fontWeight: 'bold',
-              fontSize: '14px',
-              color: (oldPrice && 'orange'),
-              ml: (oldPrice && '8px'),
-              mr: (oldPrice && '4px'),
-            }}
-          >
-            {currPrice ? `$${currPrice}` : ''}
-          </Typography>
-          {currPrice ? `${description}` : `${description.charAt(0).toUpperCase() + description.slice(1)}`}
-        </Typography>
+          <Box>
+            <Typography
+              component="p"
+              variant="p"
+              sx={{
+              }}
+            >
+              {currPrice ? `${description}` : `${description.charAt(0).toUpperCase() + description.slice(1)}`}
+            </Typography>
+          </Box>
+        </Box>
+
       </Box>
 
       {/* TODO: checkboxes for card */}
