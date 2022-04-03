@@ -58,13 +58,8 @@ const DiscountCard = ({
         }}
         >
           <Typography
+            component="h2"
             variant="h2"
-            sx={{
-              fontSize: '24px',
-              fontWeight: 'bold',
-              fontFamily: 'SF-PRO-DISPLAY-REGULAR',
-              lineHeight: '32px',
-            }}
           >
             $
             {price}
