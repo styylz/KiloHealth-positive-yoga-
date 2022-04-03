@@ -4,6 +4,7 @@ import DiscountCard from '../../../components/card/DiscountCard/DiscountCard';
 import Discount from '../../../components/layout/discount-area/Discount';
 import Title from '../../../components/Title/Title';
 import subscriptionData from '../../../data/subscriptionData';
+import FitProgram from '../HomeFitProgram/HomeFitProgram';
 
 const HomePage = () => (
   <main>
@@ -24,6 +25,9 @@ const HomePage = () => (
             <DiscountCard {...subscription} />
           ))}
         </Discount>
+      </Grid>
+      <Grid item xs={12} lg={4}>
+        <FitProgram />
       </Grid>
 
     </Grid>
