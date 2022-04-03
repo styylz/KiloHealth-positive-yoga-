@@ -97,15 +97,6 @@ const HomePage = () => {
         </ImageSwiper>
       )}
 
-      <Box sx={{
-        width: '343px',
-        alignItems: 'center',
-        m: 'auto',
-      }}
-      >
-        <PrimaryButton>Get my plan</PrimaryButton>
-      </Box>
-
       <Grid
         container
         direction="row"
@@ -185,6 +176,7 @@ const HomePage = () => {
           />
         ))}
       </Box>
+      <PrimaryButton>Get my plan</PrimaryButton>
       <Grid
         container
         direction="row"
