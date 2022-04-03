@@ -180,11 +180,26 @@ const HomePage = () => {
       >
         <PrimaryButton>Get my plan</PrimaryButton>
       </Box>
+      <Typography
+        component="h2"
+        variant="h2"
+        sx={{
+          textAlign: 'center',
+        }}
+      >
+        Start your yoga program today!
+      </Typography>
       <Grid
         container
         direction="row"
         alignItems="flex-start"
         justifyContent="center"
+        sx={{
+          mt: {
+            xs: '24px',
+            lg: '32px',
+          },
+        }}
       >
         <Grid item xs={12} lg={4}>
           <Discount>
