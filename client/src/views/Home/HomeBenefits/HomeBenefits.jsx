@@ -2,7 +2,7 @@ import { Box, Typography } from '@mui/material';
 import React from 'react';
 import GreenCheckMark from '../../../assets/green-checkmark.svg';
 
-const Benefits = () => (
+const Benefits = ({ title }) => (
   <Box sx={{
     display: 'flex',
   }}
@@ -25,7 +25,7 @@ const Benefits = () => (
           lineHeight: '20px',
         }}
       >
-        Title
+        {title}
       </Typography>
     </Box>
   </Box>
