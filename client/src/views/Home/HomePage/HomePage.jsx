@@ -9,6 +9,7 @@ import Title from '../../../components/Title/Title';
 import subscriptionData from '../../../data/subscriptionData';
 import personData from '../../../data/personData';
 import FitProgram from '../HomeFitProgram/HomeFitProgram';
+import PrimaryButton from '../../../components/Button/PrimaryButton/PrimaryButton';
 
 const HomePage = () => (
   <main>
@@ -28,6 +29,7 @@ const HomePage = () => (
           {subscriptionData.map((subscription) => (
             <DiscountCard {...subscription} />
           ))}
+          <PrimaryButton>Get my plan</PrimaryButton>
         </Discount>
       </Grid>
       <Grid item xs={12} lg={4}>
@@ -68,6 +70,14 @@ const HomePage = () => (
       }
     </ImageSwiper>
 
+    <Box sx={{
+      width: '343px',
+      alignItems: 'center',
+      m: 'auto',
+    }}
+    >
+      <PrimaryButton>Get my plan</PrimaryButton>
+    </Box>
   </main>
 );
 
