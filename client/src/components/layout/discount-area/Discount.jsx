@@ -1,16 +1,19 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 import CompaniesLogos from '../../../assets/companies-logos.png';
+import PrimaryButton from '../../Button/PrimaryButton/PrimaryButton';
 
 // TODO: get colors from theme
 const DiscountLayout = ({ children }) => (
   <Box sx={{
-    marginBottom: '48px',
+    marginBottom: '30px',
     width: '352px',
   }}
   >
     <Box sx={{
       mb: '16px',
+      pl: '5px',
+
     }}
     >
       <Typography component="h3" variant="h3">
@@ -41,7 +44,14 @@ const DiscountLayout = ({ children }) => (
     >
       {children}
     </Box>
-    <Box className="plans-container__information">
+    <Box sx={{
+      textAlign: 'center',
+      mb: 2,
+    }}
+    >
+      <PrimaryButton>Get my plan</PrimaryButton>
+    </Box>
+    <Box>
       <Box sx={{
         textAlign: 'center',
       }}

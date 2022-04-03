@@ -20,6 +20,7 @@ const Benefits = ({ title }) => (
     }}
     >
       <Typography
+        component="p"
         variant="p"
         sx={{
           lineHeight: '20px',

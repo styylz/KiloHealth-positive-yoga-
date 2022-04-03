@@ -61,14 +61,24 @@ const plansInformation = [
   },
 ];
 const FitProgram = () => (
-  <>
+  <Box sx={{
+    mt: '5px',
+  }}
+  >
     <Typography
       variant="h3"
       component="h3"
     >
       What's in my program?
     </Typography>
-    <Box sx={{ marginTop: '48px' }}>
+    <Box sx={{
+      mt: '24px',
+      pt: {
+        xs: '0',
+        lg: '20',
+      },
+    }}
+    >
       <Box sx={{
       }}
       >
@@ -114,7 +124,7 @@ const FitProgram = () => (
       </Box>
     </Box>
 
-  </>
+  </Box>
 
 );
 

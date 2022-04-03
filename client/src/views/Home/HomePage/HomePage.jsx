@@ -35,7 +35,7 @@ const HomePage = () => {
 
   return (
     <main>
-      <Box>
+      <Box sx={{ pl: '5px' }}>
         <Title />
       </Box>
 
@@ -44,14 +44,12 @@ const HomePage = () => {
         direction="row"
         alignItems="flex-start"
         justifyContent="center"
-        spacing={4}
       >
         <Grid item xs={12} lg={4}>
           <Discount>
             {subscriptionData.map((subscription) => (
               <DiscountCard key={subscription.id} {...subscription} />
             ))}
-            <PrimaryButton>Get my plan</PrimaryButton>
           </Discount>
         </Grid>
         <Grid item xs={12} lg={4}>
@@ -187,14 +185,12 @@ const HomePage = () => {
         direction="row"
         alignItems="flex-start"
         justifyContent="center"
-        spacing={4}
       >
         <Grid item xs={12} lg={4}>
           <Discount>
             {subscriptionData.map((subscription) => (
               <DiscountCard key={subscription.id} {...subscription} />
             ))}
-            <PrimaryButton>Get my plan</PrimaryButton>
           </Discount>
         </Grid>
         <Grid item xs={12} lg={4}>

@@ -13,11 +13,11 @@ const App = () => {
       <CssBaseline />
       <Header />
       {screenWidth > 900 ? (
-        <Container maxWidth="lg">
+        <Container maxWidth="lg" sx={{ pt: 2 }}>
           <HomePage />
         </Container>
       ) : (
-        <Container maxWidth="xs">
+        <Container maxWidth="xs" sx={{ pt: 2 }}>
           <HomePage />
         </Container>
       )}

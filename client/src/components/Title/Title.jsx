@@ -38,6 +38,7 @@ const Title = () => (
     }}
     >
       <Typography
+        component="h1"
         variant="h1"
         sx={{
           fontSize: {

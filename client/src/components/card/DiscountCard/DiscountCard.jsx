@@ -9,6 +9,7 @@ const DiscountCard = ({
 }) => (
   <Box
     sx={{
+      width: '343px',
       border: '2px solid rgba(0, 0, 0, 0.08)',
       padding: '0 16px',
       borderRadius: '16px',
@@ -19,6 +20,7 @@ const DiscountCard = ({
       position: 'relative',
       alignItems: 'center',
       mb: '8px',
+      mx: 'auto',
     }}
     key={title}
   >
