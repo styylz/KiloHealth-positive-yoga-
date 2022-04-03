@@ -11,6 +11,7 @@ import personData from '../../../data/personData';
 import FitProgram from '../HomeFitProgram/HomeFitProgram';
 import PrimaryButton from '../../../components/Button/PrimaryButton/PrimaryButton';
 import Banner from '../HomeBanner/HomeBanner';
+import Benefits from '../HomeBenefits/HomeBenefits';
 
 const HomePage = () => (
   <main>
@@ -148,6 +149,7 @@ const HomePage = () => (
               Is Positive Yoga right for me?
             </Typography>
           </Box>
+          <Benefits />
         </Box>
       </Grid>
     </Grid>
