@@ -96,11 +96,8 @@ const FitProgram = () => (
               </Box>
               <Box>
                 <Typography
-                  variant="h4"
-                  sx={{
-                    fontSize: '15px',
-                    fontWeight: 'bold',
-                  }}
+                  variant="h5"
+                  component="h5"
                 >
                   {title}
                 </Typography>
@@ -109,6 +106,7 @@ const FitProgram = () => (
                   sx={{
                     fontSize: '12px',
                     fontWeight: '400',
+                    lineHeight: '18px',
                   }}
                 >
                   {description}

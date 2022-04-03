@@ -17,7 +17,12 @@ const Questions = ({
     <AccordionSummary
       expandIcon={<ExpandMoreIcon />}
     >
-      <Typography variant="h5">{title}</Typography>
+      <Typography
+        component="h5"
+        variant="h5"
+      >
+        {title}
+      </Typography>
     </AccordionSummary>
     <AccordionDetails sx={{ padding: '0 16px 16px 16px' }}>
       <Typography>

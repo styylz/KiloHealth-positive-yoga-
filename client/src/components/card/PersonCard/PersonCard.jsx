@@ -27,12 +27,10 @@ const PersonCard = ({
       }}
       >
         <Typography
-          variant="p"
+          variant="h5"
+          component="h5"
           sx={{
-            fontWeight: 'bold',
             fontSize: '15px',
-            lineHeight: '20px',
-            // letterSpacing: '-0.4px',
           }}
         >
           {name}
@@ -44,8 +42,7 @@ const PersonCard = ({
           sx={{
             fontWeight: 'regular',
             fontSize: '12px',
-            letterSpacing: '-0.4px',
-            lineHeight: '20px',
+            lineHeight: '18px',
           }}
         >
           {location}

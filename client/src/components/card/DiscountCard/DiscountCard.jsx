@@ -45,10 +45,9 @@ const DiscountCard = ({
         width: '90%',
       }}
       >
-        <Typography sx={{
-          letterSpacing: '-0.4px',
-          lineHeight: '32px',
-        }}
+        <Typography
+          component="h5"
+          variant="h5"
         >
           {title}
         </Typography>
