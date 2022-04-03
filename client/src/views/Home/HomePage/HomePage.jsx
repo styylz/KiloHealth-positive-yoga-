@@ -3,6 +3,7 @@ import React from 'react';
 import DiscountCard from '../../../components/card/DiscountCard/DiscountCard';
 import Discount from '../../../components/layout/discount-area/Discount';
 import Title from '../../../components/Title/Title';
+import subscriptionData from '../../../data/subscriptionData';
 
 const HomePage = () => (
   <main>
@@ -19,7 +20,11 @@ const HomePage = () => (
     >
       <Grid item xs={12} lg={4}>
         <Discount>
-          <DiscountCard />
+          <DiscountCard>
+            {subscriptionData.map((subscription) => (
+              <DiscountCard {...subscription} />
+            ))}
+          </DiscountCard>
         </Discount>
       </Grid>
 
