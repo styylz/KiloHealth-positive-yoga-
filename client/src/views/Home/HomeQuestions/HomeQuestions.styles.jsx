@@ -5,10 +5,12 @@ const StyledAccordion = styled(Accordion)(() => ({
   width: '100%',
   marginBottom: '8px',
   borderRadius: '16px',
+  boxShadow: 'none',
   border: '1px solid rgba(0, 0, 0, 0.08)',
 
   '&.MuiAccordion-root:before': {
-    backgroundColor: 'white',
+    backgroundColor: 'transparent',
+
   },
 
   '&.Mui-expanded': {
@@ -21,18 +23,6 @@ const StyledAccordion = styled(Accordion)(() => ({
 
   '&:nth-last-child(1)': {
     marginBottom: '40px',
-  },
-
-  p: {
-    fontSize: '14px',
-    fontWeight: 'regular',
-    lineHeight: '20px',
-
-  },
-
-  h5: {
-    fontSize: '15px',
-    fontWeight: 'bold',
   },
 
 }));

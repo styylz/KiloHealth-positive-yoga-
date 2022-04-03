@@ -25,7 +25,7 @@ const Questions = ({
       </Typography>
     </AccordionSummary>
     <AccordionDetails sx={{ padding: '0 16px 16px 16px' }}>
-      <Typography>
+      <Typography component="p" variant="p">
         {description}
       </Typography>
     </AccordionDetails>
