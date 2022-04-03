@@ -29,6 +29,13 @@ const theme = createTheme({
       fontFamily: 'SF Pro Display',
       fontStyle: 'normal',
     },
+    caption: {
+      fontWeight: '400',
+      fontFamily: 'SF Pro Display',
+      fontStyle: 'normal',
+      fontSize: '12px',
+      lineHeight: '18px',
+    },
 
   },
 });
