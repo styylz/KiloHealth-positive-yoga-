@@ -59,12 +59,14 @@ const PersonCard = ({
         <CardImage myProp backgroundImage={image} />
       </Box>
       <Box>
-        <Typography sx={{
-          fontWeight: 'regular',
-          fontSize: '16px',
-          lineHeight: '24px',
-          mixBlendMode: 'normal',
-        }}
+        <Typography
+          component="p"
+          sx={{
+            fontWeight: 400,
+            fontSize: '16px',
+            lineHeight: '24px',
+            mixBlendMode: 'normal',
+          }}
         >
           {description}
         </Typography>
