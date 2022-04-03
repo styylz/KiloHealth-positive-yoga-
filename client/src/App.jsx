@@ -1,10 +1,8 @@
-import { Box } from '@mui/material';
 import React from 'react';
+import HomePage from './views/Home/HomePage/HomePage';
 
 const App = () => (
-  <Box className="App">
-    Works
-  </Box>
+  <HomePage />
 );
 
 export default App;
