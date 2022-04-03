@@ -10,6 +10,7 @@ import subscriptionData from '../../../data/subscriptionData';
 import personData from '../../../data/personData';
 import FitProgram from '../HomeFitProgram/HomeFitProgram';
 import PrimaryButton from '../../../components/Button/PrimaryButton/PrimaryButton';
+import Banner from '../HomeBanner/HomeBanner';
 
 const HomePage = () => (
   <main>
@@ -113,6 +114,9 @@ const HomePage = () => (
             Start your yoga journey now!
           </Typography>
         </Box>
+      </Grid>
+      <Grid item xs={12} lg={5}>
+        <Banner />
       </Grid>
     </Grid>
   </main>
