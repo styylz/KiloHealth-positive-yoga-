@@ -78,6 +78,43 @@ const HomePage = () => (
     >
       <PrimaryButton>Get my plan</PrimaryButton>
     </Box>
+
+    <Grid
+      container
+      direction="row"
+      alignItems="flex-start"
+      justifyContent="center"
+      sx={{
+        mt: {
+          xs: 5,
+          lg: 6,
+        },
+      }}
+    >
+      <Grid item xs={12} lg={5}>
+        <Box>
+          <Typography
+            variant="h3"
+            sx={{
+              fontWeight: '600',
+              // TODO: create another font
+              fontFamily: 'SF-PRO-DISPLAY-REGULAR',
+              fontStyle: 'normal',
+              fontSize: {
+                xs: '20',
+                lg: '28px',
+              },
+              lineHeight: {
+                xs: '28px',
+                lg: '32px',
+              },
+            }}
+          >
+            Start your yoga journey now!
+          </Typography>
+        </Box>
+      </Grid>
+    </Grid>
   </main>
 );
 
