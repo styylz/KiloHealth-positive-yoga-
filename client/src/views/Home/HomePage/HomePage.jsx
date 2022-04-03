@@ -1,6 +1,7 @@
 import { Box, Grid, Typography } from '@mui/material';
 import React from 'react';
 import DiscountCard from '../../../components/card/DiscountCard/DiscountCard';
+import PersonCard from '../../../components/card/PersonCard/PersonCard';
 import Discount from '../../../components/layout/discount-area/Discount';
 import ImageSwiper from '../../../components/swiper/ImageSwiper';
 import Title from '../../../components/Title/Title';
@@ -55,7 +56,9 @@ const HomePage = () => (
         Hear success stories from our clients
       </Typography>
     </Box>
-    <ImageSwiper />
+    <ImageSwiper>
+      <PersonCard />
+    </ImageSwiper>
 
   </main>
 );

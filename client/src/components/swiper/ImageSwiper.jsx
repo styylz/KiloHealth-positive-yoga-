@@ -14,7 +14,7 @@ const StyledSwiper = styled(Swiper)({
 
 });
 
-const ImageSwiper = () => (
+const ImageSwiper = ({ children }) => (
   <StyledSwiper
     slidesPerView={1}
     breakpoints={{
@@ -24,9 +24,9 @@ const ImageSwiper = () => (
       },
     }}
   >
-    <SwiperSlide>1</SwiperSlide>
-    <SwiperSlide>2</SwiperSlide>
-    <SwiperSlide>3</SwiperSlide>
+    <SwiperSlide>
+      {children}
+    </SwiperSlide>
   </StyledSwiper>
 );
 export default ImageSwiper;
