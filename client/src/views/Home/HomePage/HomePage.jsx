@@ -97,7 +97,7 @@ const HomePage = () => {
 
       <Grid
         container
-        direction="row"
+        direction="row-reverse"
         alignItems="flex-start"
         justifyContent="center"
         sx={{
@@ -108,17 +108,7 @@ const HomePage = () => {
         }}
       >
         <Grid item xs={12} lg={5}>
-          <Box>
-            <Typography
-              component="h3"
-              variant="h3"
-            >
-              Start your yoga journey now!
-            </Typography>
-          </Box>
-          <Banner />
-        </Grid>
-        <Grid item xs={12} lg={4}>
+
           <Box sx={{
             mb: '42px',
           }}
@@ -139,6 +129,17 @@ const HomePage = () => {
             </Box>
             {benefitsData.map((benefit) => <Benefits key={benefit.id} {...benefit} />)}
           </Box>
+        </Grid>
+        <Grid item xs={12} lg={4}>
+          <Box>
+            <Typography
+              component="h3"
+              variant="h3"
+            >
+              Start your yoga journey now!
+            </Typography>
+          </Box>
+          <Banner />
         </Grid>
       </Grid>
 

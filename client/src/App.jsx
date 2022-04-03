@@ -17,7 +17,7 @@ const App = () => {
           <HomePage />
         </Container>
       ) : (
-        <Container maxWidth="lg">
+        <Container maxWidth="xs">
           <HomePage />
         </Container>
       )}
