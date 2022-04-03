@@ -8,7 +8,7 @@ export const PrimaryButton = styled(Button)({
   width: '343px',
   height: '56px',
   color: 'white',
-  textTransform: 'lowercase',
+  textTransform: 'none',
   boxShadow: '0px 16px 32px rgba(255, 155, 78, 0.24)',
   borderRadius: '8px',
   '&: hover': {

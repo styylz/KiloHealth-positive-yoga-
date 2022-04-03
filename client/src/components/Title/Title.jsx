@@ -25,8 +25,16 @@ const Title = () => (
       plans ordered.
     </Typography>
     <Box sx={{
+      width: {
+        xs: '100%',
+        lg: '80%',
+      },
       mb: '24px',
       mt: '8px',
+      mx: {
+        xs: 0,
+        lg: 25,
+      },
     }}
     >
       <Typography
@@ -46,6 +54,7 @@ const Title = () => (
             lg: 'left',
           },
         }}
+
       >
         Get access to your yoga program now!
 

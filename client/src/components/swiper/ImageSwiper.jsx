@@ -6,10 +6,9 @@ import styled from '@emotion/styled';
 
 const StyledSwiper = styled(Swiper)({
   height: '700px',
-  width: '95vw',
+  width: '100vw',
   maxWidth: '100vw',
   margin: '0 calc(-50vw + 50%)',
-  paddingRight: '5vw',
   marginBottom: '38px',
 
 });

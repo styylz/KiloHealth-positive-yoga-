@@ -76,8 +76,6 @@ const HomePage = () => {
 
       {getWindowWidth() > 900 ? (
         <Box sx={{
-          width: '100%',
-          margin: 'auto',
           display: 'flex',
         }}
         >
@@ -176,7 +174,13 @@ const HomePage = () => {
           />
         ))}
       </Box>
-      <PrimaryButton>Get my plan</PrimaryButton>
+      <Box sx={{
+        textAlign: 'center',
+        mb: '48px',
+      }}
+      >
+        <PrimaryButton>Get my plan</PrimaryButton>
+      </Box>
       <Grid
         container
         direction="row"
