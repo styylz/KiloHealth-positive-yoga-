@@ -18,6 +18,12 @@ const theme = createTheme({
       fontStyle: 'normal',
       fontSize: '16px',
     },
+    h5: {
+      fontWeight: '600',
+      fontFamily: 'SF Pro Display',
+      fontStyle: 'normal',
+      letterSpacing: '-0.4 px',
+    },
 
   },
 });
@@ -42,6 +48,16 @@ const defaultTheme = createTheme(theme, {
       [theme.breakpoints.up('lg')]: {
         fontSize: '24px',
         lineHeight: '32px',
+      },
+    },
+    h5: {
+      [theme.breakpoints.up('xs')]: {
+        fontSize: '15px',
+        lineHeight: '20px',
+      },
+      [theme.breakpoints.up('lg')]: {
+        fontSize: '16px',
+        lineHeight: '24px',
       },
     },
   },
