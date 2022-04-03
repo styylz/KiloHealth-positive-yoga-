@@ -116,7 +116,40 @@ const HomePage = () => (
         </Box>
         <Banner />
       </Grid>
-      <Grid item xs={12} lg={5} />
+      <Grid item xs={12} lg={4}>
+        <Box sx={{
+          mb: '42px',
+        }}
+        >
+          <Box sx={{
+            mb: {
+              xs: '20px',
+              lg: '24px',
+            },
+          }}
+          >
+            <Typography
+              variant="h3"
+              sx={{
+                fontWeight: '600',
+                // TODO: create another font
+                fontFamily: 'SF-PRO-DISPLAY-REGULAR',
+                fontStyle: 'normal',
+                fontSize: {
+                  xs: '20',
+                  lg: '28px',
+                },
+                lineHeight: {
+                  xs: '28px',
+                  lg: '32px',
+                },
+              }}
+            >
+              Is Positive Yoga right for me?
+            </Typography>
+          </Box>
+        </Box>
+      </Grid>
     </Grid>
   </main>
 );
