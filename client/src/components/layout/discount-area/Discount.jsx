@@ -1,7 +1,6 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 import CompaniesLogos from '../../../assets/companies-logos.png';
-import * as S from './Discount.styles';
 
 // TODO: get colors from theme
 const DiscountLayout = ({ children }) => (
@@ -14,30 +13,27 @@ const DiscountLayout = ({ children }) => (
       mb: '16px',
     }}
     >
-      <S.Heading
-        variant="h3"
-        sx={{
-          fontSize: {
-            xs: '20px',
-            lg: '24px',
-          },
-          lineHeight: {
-            xs: '28px',
-            lg: '32px',
-          },
-        }}
-      >
+      <Typography component="h3" variant="h3">
         Choose your plan and get
         <Typography
-          variant="span"
+          component="span"
           sx={{
             ml: '4px',
             color: 'orange',
+            fontWeight: '700',
+            fontSize: {
+              xs: '20px',
+              lg: '24',
+            },
+            lineHeight: {
+              xs: '28px',
+              lg: '32px',
+            },
           }}
         >
           7 days free trial
         </Typography>
-      </S.Heading>
+      </Typography>
     </Box>
     <Box sx={{
       mb: 2,

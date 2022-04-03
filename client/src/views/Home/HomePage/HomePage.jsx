@@ -67,13 +67,8 @@ const HomePage = () => {
       }}
       >
         <Typography
+          component="h3"
           variant="h3"
-          sx={{
-            color: '#22222C',
-            fontSize: {
-              lg: '24px',
-            },
-          }}
         >
           Hear success stories from our clients
         </Typography>
@@ -126,15 +121,8 @@ const HomePage = () => {
         <Grid item xs={12} lg={5}>
           <Box>
             <Typography
+              component="h3"
               variant="h3"
-              sx={{
-                fontWeight: '600',
-                // TODO: create another font
-                lineHeight: {
-                  xs: '28px',
-                  lg: '32px',
-                },
-              }}
             >
               Start your yoga journey now!
             </Typography>
@@ -154,21 +142,8 @@ const HomePage = () => {
             }}
             >
               <Typography
+                component="h3"
                 variant="h3"
-                sx={{
-                  fontWeight: '600',
-                  // TODO: create another font
-                  fontFamily: 'SF-PRO-DISPLAY-REGULAR',
-                  fontStyle: 'normal',
-                  fontSize: {
-                    xs: '20',
-                    lg: '28px',
-                  },
-                  lineHeight: {
-                    xs: '28px',
-                    lg: '32px',
-                  },
-                }}
               >
                 Is Positive Yoga right for me?
               </Typography>
@@ -190,21 +165,15 @@ const HomePage = () => {
 
         <Box>
           <Typography
+            component="h3"
             variant="h3"
             sx={{
-              fontWeight: '600',
-              fontStyle: 'normal',
-
-              lineHeight: {
-                xs: '28px',
-                lg: '32px',
-              },
               textAlign: 'center',
               // TODO: delete later mb
               mb: 2,
             }}
           >
-            Frequently Asked Questions!!!!!!!!!!!!
+            Frequently Asked Questions
           </Typography>
         </Box>
         {questionsData.map((question) => (
