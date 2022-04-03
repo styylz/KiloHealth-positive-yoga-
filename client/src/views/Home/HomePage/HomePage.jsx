@@ -2,6 +2,7 @@ import { Box, Grid, Typography } from '@mui/material';
 import React from 'react';
 import DiscountCard from '../../../components/card/DiscountCard/DiscountCard';
 import Discount from '../../../components/layout/discount-area/Discount';
+import ImageSwiper from '../../../components/swiper/ImageSwiper';
 import Title from '../../../components/Title/Title';
 import subscriptionData from '../../../data/subscriptionData';
 import FitProgram from '../HomeFitProgram/HomeFitProgram';
@@ -54,6 +55,8 @@ const HomePage = () => (
         Hear success stories from our clients
       </Typography>
     </Box>
+    <ImageSwiper />
+
   </main>
 );
 
