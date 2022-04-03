@@ -15,6 +15,7 @@ import Benefits from '../HomeBenefits/HomeBenefits';
 import benefitsData from '../../../data/benefitsData';
 import questionsData from '../../../data/questionsData';
 import Questions from '../HomeQuestions/HomeQuestions';
+import { getWindowWidth } from '../../../utils/helpers/window-helper';
 
 const HomePage = () => {
   const [expandedPanel, setExpandedPanel] = useState({
@@ -31,6 +32,7 @@ const HomePage = () => {
       [panelName]: newExpanded,
     });
   };
+
   return (
     <main>
       <Box>
@@ -80,15 +82,29 @@ const HomePage = () => {
           Hear success stories from our clients
         </Typography>
       </Box>
-      <ImageSwiper>
-        {
-        personData.map((userInfo) => (
-          <SwiperSlide key={userInfo.id}>
+
+      {getWindowWidth() > 900 ? (
+        <Box sx={{
+          width: '100%',
+          margin: 'auto',
+          display: 'flex',
+        }}
+        >
+          {personData.map((userInfo) => (
             <PersonCard {...userInfo} />
-          </SwiperSlide>
-        ))
-      }
-      </ImageSwiper>
+          ))}
+        </Box>
+      ) : (
+        <ImageSwiper>
+          {
+            personData.map((userInfo) => (
+              <SwiperSlide>
+                <PersonCard {...userInfo} />
+              </SwiperSlide>
+            ))
+          }
+        </ImageSwiper>
+      )}
 
       <Box sx={{
         width: '343px',
