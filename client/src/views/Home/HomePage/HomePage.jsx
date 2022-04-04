@@ -94,7 +94,7 @@ const HomePage = () => {
           }}
           >
             {personData.map((userInfo) => (
-              <PersonCard {...userInfo} />
+              <PersonCard key={userInfo.id} {...userInfo} />
             ))}
           </Box>
         </Box>
