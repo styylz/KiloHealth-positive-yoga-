@@ -1,5 +1,6 @@
 import React from 'react';
 import { Swiper } from 'swiper/react';
+import SwiperCore, { Pagination } from 'swiper';
 import 'swiper/swiper-bundle.min.css';
 import 'swiper/swiper.min.css';
 import styled from '@emotion/styled';
@@ -13,17 +14,21 @@ const StyledSwiper = styled(Swiper)({
 
 });
 
-const ImageSwiper = ({ children }) => (
-  <StyledSwiper
-    slidesPerView={1}
-    breakpoints={{
-      300: {
-        slidesPerView: 1,
-        spaceBetween: 16,
-      },
-    }}
-  >
-    {children}
-  </StyledSwiper>
-);
+const ImageSwiper = ({ children }) => {
+  SwiperCore.use([Pagination]);
+  return (
+    <StyledSwiper
+      pagination
+      slidesPerView={1}
+      breakpoints={{
+        300: {
+          slidesPerView: 1,
+          spaceBetween: 16,
+        },
+      }}
+    >
+      {children}
+    </StyledSwiper>
+  );
+};
 export default ImageSwiper;
