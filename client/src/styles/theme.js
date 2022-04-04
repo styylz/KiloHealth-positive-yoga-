@@ -36,7 +36,19 @@ const theme = createTheme({
       fontSize: '12px',
       lineHeight: '18px',
     },
-
+    palette: {
+      primary: {
+        main: '#FFFFFF',
+        orange: '#FF9B4E',
+        grey: 'rgba(0, 0, 0, 0.08)',
+      },
+      secondary: {
+        main: '#90CAF9 ',
+      },
+      background: {
+        default: '#FFFFFF',
+      },
+    },
   },
 });
 

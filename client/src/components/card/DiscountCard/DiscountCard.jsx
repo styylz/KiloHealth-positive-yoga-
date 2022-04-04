@@ -6,6 +6,7 @@ import React from 'react';
 import DiscountChip from './DiscountCard.styles';
 import OrangeCircle from '../../../assets/orange-circle.svg'
 import GreyCircle from '../../../assets/grey-circle.svg'
+import * as S from './DiscountCard.styles'
 
 const DiscountCard = ({
   title,
@@ -18,21 +19,10 @@ const DiscountCard = ({
   changeState,
   checked
 }) => (
-  <Box
-    sx={{
-      width: '343px',
-      border: `${checked ? '2px solid orange' : '2px solid rgba(0, 0, 0, 0.08)'}`,
-      padding: '0 16px',
-      borderRadius: '16px',
-      height: {
-        xs: '120px',
-        lg: '131px',
-      },
-      position: 'relative',
-      alignItems: 'center',
-      mb: '8px',
-      mx: 'auto',
-    }}
+  <S.DiscountCard
+    myProp={checked}
+    border
+
     onClick={() => changeState(index)}
     key={title}
   >
@@ -161,7 +151,7 @@ const DiscountCard = ({
           }}
         />
     </Box>
-  </Box>
+  </S.DiscountCard>
 );
 
 export default DiscountCard;
