@@ -16,12 +16,12 @@ const StyledAccordion = styled(Accordion)(() => ({
   '&.Mui-expanded': {
     minHeight: 0,
 
-    '&:nth-last-child(1)': {
+    '&:nth-last-of-type(1)': {
       marginBottom: '40px',
     },
   },
 
-  '&:nth-last-child(1)': {
+  '&:nth-last-of-type(1)': {
     marginBottom: '40px',
   },
 

@@ -102,7 +102,9 @@ const HomePage = () => {
         <ImageSwiper>
           {
             personData.map((userInfo) => (
-              <SwiperSlide>
+              <SwiperSlide
+                key={userInfo.id}
+              >
                 <PersonCard {...userInfo} />
               </SwiperSlide>
             ))

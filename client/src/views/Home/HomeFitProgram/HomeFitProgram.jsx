@@ -85,9 +85,10 @@ const FitProgram = () => (
       }}
       >
         {plansInformation.map(({
-          title, description, svg,
+          title, description, svg, id,
         }) => (
           <Box
+            key={id}
             sx={{
               display: 'flex',
               paddingBottom: '12px',
