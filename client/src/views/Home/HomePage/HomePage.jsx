@@ -25,12 +25,20 @@ const HomePage = () => {
     4: false,
   });
 
+  // eslint-disable-next-line no-unused-vars
+  const [discountCheck, setDiscountCheck] = useState(0);
+
   const handleChange = (panelName) => (event, newExpanded) => {
     console.log(panelName, newExpanded);
     setExpandedPanel({
       ...expandedPanel,
       [panelName]: newExpanded,
     });
+  };
+
+  const handleDiscountCheck = (index) => {
+    console.log(index);
+    setDiscountCheck(index);
   };
 
   return (
@@ -47,8 +55,14 @@ const HomePage = () => {
       >
         <Grid item xs={12} lg={4}>
           <Discount>
-            {subscriptionData.map((subscription) => (
-              <DiscountCard key={subscription.id} {...subscription} />
+            {subscriptionData.map((subscription, i) => (
+              <DiscountCard
+                index={i}
+                changeState={handleDiscountCheck}
+                checked={discountCheck === i}
+                key={subscription.id}
+                {...subscription}
+              />
             ))}
           </Discount>
         </Grid>

@@ -1,16 +1,27 @@
+/*eslint-disable*/
 import {
   Box, Typography,
 } from '@mui/material';
 import React from 'react';
 import DiscountChip from './DiscountCard.styles';
+import OrangeCircle from '../../../assets/orange-circle.svg'
+import GreyCircle from '../../../assets/grey-circle.svg'
 
 const DiscountCard = ({
-  title, price, oldPrice, currPrice, description, discount,
+  title,
+  price,
+  oldPrice,
+  currPrice,
+  description,
+  discount,
+  index,
+  changeState,
+  checked
 }) => (
   <Box
     sx={{
       width: '343px',
-      border: '2px solid rgba(0, 0, 0, 0.08)',
+      border: `${checked ? '2px solid orange' : '2px solid rgba(0, 0, 0, 0.08)'}`,
       padding: '0 16px',
       borderRadius: '16px',
       height: {
@@ -22,6 +33,7 @@ const DiscountCard = ({
       mb: '8px',
       mx: 'auto',
     }}
+    onClick={() => changeState(index)}
     key={title}
   >
     <Box sx={{
@@ -39,7 +51,9 @@ const DiscountCard = ({
             label={discount.charAt(0).toUpperCase() + discount.slice(1)}
           />
         ) : null }
+
     </Box>
+
     <Box sx={{
       display: 'flex',
       alignItems: 'center',
@@ -137,24 +151,15 @@ const DiscountCard = ({
         </Box>
 
       </Box>
-
-      {/* TODO: checkboxes for card */}
-      {/* <RadioGroup
-          value={title}
-          onChange={handleChange}
-        >
-          <FormControlLabel checked={state.level === title} value={title} control={<Radio />} />
-        </RadioGroup> */}
-
-      {/* <input
-        type="radio"
-        value={title}
-        name="content"
-        id={title}
-        onClick={handleChange}
-        checked={state.level === title}
-      /> */}
-      {/* <Box>{state.level}</Box> */}
+      <Box
+          sx={{
+            backgroundImage: `${checked ? `url(${OrangeCircle})` : `url(${GreyCircle})`  }`,
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+            width: '20px',
+            height: '20px',
+          }}
+        />
     </Box>
   </Box>
 );
