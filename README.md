@@ -3,7 +3,7 @@ This is my project for Kilo Health
 
 ## Important
 
-* To correctly view mobile and desktop layouts page needs to be refreshed
+* To correctly view mobile and desktop layouts page needs to be refreshed<br/>
  **Example**: select *iPhone 12 Pro* from device toolbar and then refresh the page
 
 ### Required programs to run project
