@@ -77,9 +77,15 @@ const HomePage = () => {
           display: 'flex',
         }}
         >
-          {personData.map((userInfo) => (
-            <PersonCard {...userInfo} />
-          ))}
+          <Box sx={{
+            display: 'flex',
+            mx: 'auto',
+          }}
+          >
+            {personData.map((userInfo) => (
+              <PersonCard {...userInfo} />
+            ))}
+          </Box>
         </Box>
       ) : (
         <ImageSwiper>
