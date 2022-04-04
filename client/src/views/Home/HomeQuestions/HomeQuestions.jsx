@@ -4,6 +4,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import StyledAccordion from './HomeQuestions.styles';
+import { getWindowWidth } from '../../../utils/helpers/window-helper';
 
 const Questions = ({
   id, title, description, expanded, tooglePanel,
@@ -11,7 +12,7 @@ const Questions = ({
   <StyledAccordion
     square
     onChange={tooglePanel(Number(id))}
-    expanded={expanded[Number(id)]}
+    expanded={getWindowWidth() > 900 ? expanded[Number(id)] : true}
     disableGutters
   >
     <AccordionSummary

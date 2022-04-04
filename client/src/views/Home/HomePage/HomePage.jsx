@@ -223,8 +223,14 @@ const HomePage = () => {
       >
         <Grid item xs={12} lg={4}>
           <Discount>
-            {subscriptionData.map((subscription) => (
-              <DiscountCard key={subscription.id} {...subscription} />
+            {subscriptionData.map((subscription, i) => (
+              <DiscountCard
+                index={i}
+                changeState={handleDiscountCheck}
+                checked={discountCheck === i}
+                key={subscription.id}
+                {...subscription}
+              />
             ))}
           </Discount>
         </Grid>

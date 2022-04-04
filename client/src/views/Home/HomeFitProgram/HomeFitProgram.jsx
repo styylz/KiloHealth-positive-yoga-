@@ -63,6 +63,10 @@ const plansInformation = [
 const FitProgram = () => (
   <Box sx={{
     mt: '5px',
+    mb: {
+      xs: '40px',
+      lg: '48px',
+    },
   }}
   >
     <Typography
@@ -72,7 +76,7 @@ const FitProgram = () => (
       What's in my program?
     </Typography>
     <Box sx={{
-      mt: '24px',
+      mt: '39px',
       pt: {
         xs: '0',
         lg: '20',

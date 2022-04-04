@@ -20,9 +20,8 @@ export const DiscountChip = styled(Chip)({
 export const DiscountCard = styled(Box, {
   shouldForwardProp: (prop) => prop !== 'myProp',
 })(({ myProp, theme }) => ({
-
   width: '343px',
-  border: myProp ? '2px solid orange' : '2px solid rgba(0, 0, 0, 0.08)',
+  border: myProp ? '2px solid #FF9B4E' : '2px solid rgba(0, 0, 0, 0.08)',
   padding: '0 16px',
   borderRadius: '16px',
   position: 'relative',
@@ -35,7 +34,6 @@ export const DiscountCard = styled(Box, {
   [theme.breakpoints.up('lg')]: {
     height: '131px',
   },
-
 }));
 
 export default DiscountChip;
