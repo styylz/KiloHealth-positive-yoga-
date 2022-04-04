@@ -39,7 +39,7 @@ const HomePage = () => {
   };
 
   return (
-    <main>
+    <Box component="main">
       <Box sx={{ pl: '5px' }}>
         <Title />
       </Box>
@@ -236,7 +236,7 @@ const HomePage = () => {
           <FitProgram />
         </Grid>
       </Grid>
-    </main>
+    </Box>
   );
 };
 
