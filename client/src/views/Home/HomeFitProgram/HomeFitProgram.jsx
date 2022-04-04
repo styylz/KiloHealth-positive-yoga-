@@ -10,8 +10,6 @@ import smartwatch from '../../../assets/plans-images/smartwatch.svg';
 import whistle from '../../../assets/plans-images/whistle.svg';
 
 const plansInformation = [
-  // TODO: try to get images from public folder without importing
-  // TODO: make dynamic by name
   {
     id: '1',
     title: 'A personalized yoga program',

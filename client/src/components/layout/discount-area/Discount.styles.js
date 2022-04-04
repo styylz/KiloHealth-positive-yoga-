@@ -4,7 +4,6 @@ export const STypography = styled(Typography)({
   fontSize: '15px',
   fontWeight: '600',
   lineHeight: '20px',
-  // TODO: create another font
   fontFamily: 'SF-PRO-DISPLAY-REGULAR',
   fontStyle: 'normal',
 });

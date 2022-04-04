@@ -3,7 +3,6 @@ import { Box, Typography } from '@mui/material';
 import CompaniesLogos from '../../../assets/companies-logos.png';
 import PrimaryButton from '../../Button/PrimaryButton/PrimaryButton';
 
-// TODO: get colors from theme
 const DiscountLayout = ({ children }) => (
   <Box sx={{
     marginBottom: '30px',
@@ -78,7 +77,6 @@ const DiscountLayout = ({ children }) => (
           <Typography
             variant="span"
             sx={{
-            // TODO: get right color
               color: '#eff4fb',
             }}
           >

@@ -25,11 +25,9 @@ const HomePage = () => {
     4: false,
   });
 
-  // eslint-disable-next-line no-unused-vars
   const [discountCheck, setDiscountCheck] = useState(0);
 
   const handleChange = (panelName) => (event, newExpanded) => {
-    console.log(panelName, newExpanded);
     setExpandedPanel({
       ...expandedPanel,
       [panelName]: newExpanded,
@@ -37,7 +35,6 @@ const HomePage = () => {
   };
 
   const handleDiscountCheck = (index) => {
-    console.log(index);
     setDiscountCheck(index);
   };
 
@@ -177,7 +174,6 @@ const HomePage = () => {
             variant="h3"
             sx={{
               textAlign: 'center',
-              // TODO: delete later mb
               mb: 2,
             }}
           >
