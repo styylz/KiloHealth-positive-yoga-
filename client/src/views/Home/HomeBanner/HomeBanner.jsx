@@ -2,30 +2,10 @@ import { Box } from '@mui/material';
 import React from 'react';
 import phone from '../../../assets/banner-images/phone1.png';
 import phone2 from '../../../assets/banner-images/phone2.png';
-import accent from '../../../assets/banner-images/accent.svg';
+import * as S from './HomeBanner.styles';
 
 const Banner = () => (
-  <Box sx={{
-    backgroundImage: {
-      xs: `url(${accent})`,
-      lg: 'url()',
-    },
-    backgroundRepeat: 'no-repeat',
-    height: '433px',
-    width: {
-      xs: '100vw',
-      lg: '21vw',
-    },
-    maxWidth: '100vw',
-    margin: {
-      xs: '0 calc(-50vw + 50%)',
-      lg: '0',
-    },
-    position: 'relative',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-  }}
-  >
+  <S.Banner>
     <Box sx={{
       position: 'absolute',
       top: '47px',
@@ -49,7 +29,7 @@ const Banner = () => (
     >
       <img alt="phone2" src={phone2} />
     </Box>
-  </Box>
+  </S.Banner>
 );
 
 export default Banner;
