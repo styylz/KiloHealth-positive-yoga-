@@ -1,8 +1,9 @@
 import React from 'react';
 import { Box, Rating, Typography } from '@mui/material';
 import CardImage from './PersonCard.styles';
+import { Person } from '../../../data/constants';
 
-const PersonCard = ({
+const PersonCard: React.FC<Person> = ({
   name, age, location, description, image,
 }) => (
   <Box sx={{

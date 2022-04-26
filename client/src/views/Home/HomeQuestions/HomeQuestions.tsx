@@ -5,14 +5,20 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import StyledAccordion from './HomeQuestions.styles';
 import { getWindowWidth } from '../../../utils/helpers/window-helper';
+import Panel from '../../../types/panel';
+import { Question } from '../../../data/constants';
 
-const Questions = ({
+interface QuestionsProps extends Question {
+  expanded: Panel
+  tooglePanel: (panelName: number) => (e: React.SyntheticEvent, newExpanded: boolean) => void;
+}
+const Questions: React.FC<QuestionsProps> = ({
   id, title, description, expanded, tooglePanel,
 }) => (
   <StyledAccordion
     square
     onChange={tooglePanel(Number(id))}
-    expanded={getWindowWidth() > 900 ? expanded[Number(id)] : true}
+    expanded={getWindowWidth() > 900 ? expanded[Number(id) as keyof Panel] : true}
     disableGutters
   >
     <AccordionSummary

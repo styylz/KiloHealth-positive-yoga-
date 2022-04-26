@@ -4,7 +4,7 @@ import * as S from './Header.styles';
 import badge from '../../../../assets/headerBadge.svg';
 import logo from '../../../../assets/Logo.png';
 
-const Header = () => (
+const Header: React.FC = () => (
   <>
     <S.Header>
       <Box sx={{
@@ -14,7 +14,7 @@ const Header = () => (
         height: '56px',
       }}
       >
-        <img width="20px" height="20px" alt="badge" src={badge} />
+        <img width="20px" height="20px" alt="badge" src={badge as string} />
         <Typography
           component="p"
           sx={{
@@ -43,16 +43,14 @@ const Header = () => (
             }}
           >
             00:15:49
-
           </Typography>
         </Typography>
       </Box>
     </S.Header>
     <S.Nav>
-      <img alt="badge" src={logo} />
+      <img alt="badge" src={logo as string} />
     </S.Nav>
   </>
-
 );
 
 export default Header;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 
-const Title = () => (
+const Title: React.FC = () => (
   <>
     <Typography sx={{
       textAlign: {
@@ -58,7 +58,6 @@ const Title = () => (
 
       >
         Get access to your yoga program now!
-
       </Typography>
     </Box>
   </>

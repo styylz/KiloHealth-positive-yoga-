@@ -1,14 +1,19 @@
-/*eslint-disable*/
 import {
   Box, Typography,
 } from '@mui/material';
 import React from 'react';
-import DiscountChip from './DiscountCard.styles';
-import OrangeCircle from '../../../assets/orange-circle.svg'
-import GreyCircle from '../../../assets/grey-circle.svg'
-import * as S from './DiscountCard.styles'
+import OrangeCircle from 'assets/orange-circle.svg';
+import GreyCircle from 'assets/grey-circle.svg';
+import * as S from './DiscountCard.styles';
+import { Subscription } from '../../../data/constants';
 
-const DiscountCard = ({
+interface DiscountCardProps extends Subscription {
+  index: number,
+  changeState: (index: number) => void,
+  checked: boolean
+}
+
+const DiscountCard: React.FC<DiscountCardProps> = ({
   title,
   price,
   oldPrice,
@@ -17,12 +22,10 @@ const DiscountCard = ({
   discount,
   index,
   changeState,
-  checked
+  checked,
 }) => (
   <S.DiscountCard
     myProp={checked}
-    border
-
     onClick={() => changeState(index)}
     key={title}
   >
@@ -37,13 +40,11 @@ const DiscountCard = ({
     >
       { discount
         ? (
-          <DiscountChip
+          <S.DiscountChip
             label={discount.charAt(0).toUpperCase() + discount.slice(1)}
           />
         ) : null }
-
     </Box>
-
     <Box sx={{
       display: 'flex',
       alignItems: 'center',
@@ -99,7 +100,6 @@ const DiscountCard = ({
           display: 'flex',
         }}
         >
-
           <Typography component="p" variant="p">
             <Typography
               component="span"
@@ -142,14 +142,14 @@ const DiscountCard = ({
 
       </Box>
       <Box
-          sx={{
-            backgroundImage: `${checked ? `url(${OrangeCircle})` : `url(${GreyCircle})`  }`,
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
-            width: '20px',
-            height: '20px',
-          }}
-        />
+        sx={{
+          backgroundImage: `${checked ? `url(${OrangeCircle as string})` : `url(${GreyCircle as string})`}`,
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+          width: '20px',
+          height: '20px',
+        }}
+      />
     </Box>
   </S.DiscountCard>
 );

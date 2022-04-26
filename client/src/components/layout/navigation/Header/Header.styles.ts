@@ -1,5 +1,4 @@
-/*eslint-disable*/
-import { styled, Typography, Box } from '@mui/material';
+import { styled, Box } from '@mui/material';
 
 export const Header = styled(Box)({
   backgroundColor: '#90CAF9',

@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { Accordion } from '@mui/material';
 
-const StyledAccordion = styled(Accordion)(() => ({
+const StyledAccordion = styled(Accordion)(({
   width: '100%',
   marginBottom: '8px',
   borderRadius: '16px',

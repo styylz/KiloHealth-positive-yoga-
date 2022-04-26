@@ -6,7 +6,7 @@ import HomePage from './views/Home/HomePage/HomePage';
 import { getWindowWidth } from './utils/helpers/window-helper';
 import defaultTheme from './styles/theme';
 
-const App = () => {
+const App: React.FC = () => {
   const screenWidth = getWindowWidth();
   return (
     <ThemeProvider theme={defaultTheme}>

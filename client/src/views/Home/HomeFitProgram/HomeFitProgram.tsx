@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 import diet from '../../../assets/plans-images/diet.svg';
@@ -9,56 +8,63 @@ import shoe from '../../../assets/plans-images/shoe.svg';
 import smartwatch from '../../../assets/plans-images/smartwatch.svg';
 import whistle from '../../../assets/plans-images/whistle.svg';
 
-const plansInformation = [
+type PlansProps = {
+  id: string;
+  title: string;
+  description: string;
+  svg: JSX.Element;
+};
+
+const plansInformation: PlansProps[] = [
   {
     id: '1',
     title: 'A personalized yoga program',
     description: 'Completely safe and focused on your key goals',
-    svg: <img alt="plan" src={plan} />,
+    svg: <img alt="plan" src={plan as string} />,
   },
   {
     id: '2',
     title: 'Easy & enjoyable yoga workouts for your level',
     description: 'Program adjusts to your level and pace',
-    svg: <img alt="plan" src={exercise} />,
+    svg: <img alt="plan" src={exercise as string} />,
 
   },
   {
     id: '3',
     title: 'No special preparation needed',
     description: 'Perfect for begginners! Requires no special preparation or equipment',
-    svg: <img alt="plan" src={shoe} />,
+    svg: <img alt="plan" src={shoe as string} />,
 
   },
   {
     id: '4',
     title: 'Daily motivation & accountability',
     description: 'Track your progress, develop a healthy routine, reach goals faster',
-    svg: <img alt="plan" src={diet} />,
+    svg: <img alt="plan" src={diet as string} />,
 
   },
   {
     id: '5',
     title: 'Browse from various yoga challenges',
     description: '30 d morning yoga, mindful yoga, back flexibility challenge, and more!',
-    svg: <img alt="plan" src={whistle} />,
+    svg: <img alt="plan" src={whistle as string} />,
 
   },
   {
     id: '6',
     title: 'Easy access on any device',
     description: 'Do your yoga anywhere across all types of devices',
-    svg: <img alt="plan" src={smartwatch} />,
+    svg: <img alt="plan" src={smartwatch as string} />,
 
   },
   {
     id: '7',
     title: 'A complete guide to get started',
     description: 'Best tips, guidelines, advice, and recommendations for successful practice',
-    svg: <img alt="plan" src={bookcheck} />,
+    svg: <img alt="plan" src={bookcheck as string} />,
   },
 ];
-const FitProgram = () => (
+const FitProgram: React.FC = () => (
   <Box sx={{
     mt: '5px',
     mb: {
@@ -71,7 +77,7 @@ const FitProgram = () => (
       variant="h3"
       component="h3"
     >
-      What's in my program?
+      What&apos;s in my program?
     </Typography>
     <Box sx={{
       mt: '39px',
@@ -126,9 +132,7 @@ const FitProgram = () => (
         ))}
       </Box>
     </Box>
-
   </Box>
-
 );
 
 export default FitProgram;
