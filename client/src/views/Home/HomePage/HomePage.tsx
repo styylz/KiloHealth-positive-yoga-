@@ -1,40 +1,43 @@
+import React, { useState } from 'react';
 import { Box, Grid, Typography } from '@mui/material';
 import { SwiperSlide } from 'swiper/react';
-import React, { useState } from 'react';
-import DiscountCard from '../../../components/card/DiscountCard/DiscountCard';
+import DiscountCard from 'components/card/DiscountCard/DiscountCard';
 import PersonCard from '../../../components/card/PersonCard/PersonCard';
 import Discount from '../../../components/layout/discount-area/Discount';
 import ImageSwiper from '../../../components/swiper/ImageSwiper';
 import Title from '../../../components/Title/Title';
-import subscriptionData from '../../../data/subscriptionData';
-import personData from '../../../data/personData';
 import FitProgram from '../HomeFitProgram/HomeFitProgram';
 import PrimaryButton from '../../../components/Button/PrimaryButton/PrimaryButton';
 import Banner from '../HomeBanner/HomeBanner';
 import Benefits from '../HomeBenefits/HomeBenefits';
-import benefitsData from '../../../data/benefitsData';
-import questionsData from '../../../data/questionsData';
 import Questions from '../HomeQuestions/HomeQuestions';
 import { getWindowWidth } from '../../../utils/helpers/window-helper';
+import Panel from '../../../types/panel';
+import {
+  subscriptionData,
+  reviewData,
+  benefitsData,
+  questionsData,
+} from '../../../data/constants';
 
-const HomePage = () => {
-  const [expandedPanel, setExpandedPanel] = useState({
+const HomePage: React.FC = () => {
+  const [expandedPanel, setExpandedPanel] = useState<Panel>({
     1: true,
     2: false,
     3: false,
     4: false,
   });
 
-  const [discountCheck, setDiscountCheck] = useState(0);
+  const [discountCheck, setDiscountCheck] = useState<number>(0);
 
-  const handleChange = (panelName) => (event, newExpanded) => {
+  const handleChange = (panelName: number) => (e: React.SyntheticEvent, newExpanded: boolean) => {
     setExpandedPanel({
       ...expandedPanel,
       [panelName]: newExpanded,
     });
   };
 
-  const handleDiscountCheck = (index) => {
+  const handleDiscountCheck = (index: number): void => {
     setDiscountCheck(index);
   };
 
@@ -43,7 +46,6 @@ const HomePage = () => {
       <Box sx={{ pl: '5px' }}>
         <Title />
       </Box>
-
       <Grid
         container
         direction="row"
@@ -93,7 +95,7 @@ const HomePage = () => {
             mx: 'auto',
           }}
           >
-            {personData.map((userInfo) => (
+            {reviewData.map((userInfo) => (
               <PersonCard key={userInfo.id} {...userInfo} />
             ))}
           </Box>
@@ -101,7 +103,7 @@ const HomePage = () => {
       ) : (
         <ImageSwiper>
           {
-            personData.map((userInfo) => (
+            reviewData.map((userInfo) => (
               <SwiperSlide
                 key={userInfo.id}
               >
@@ -111,7 +113,6 @@ const HomePage = () => {
           }
         </ImageSwiper>
       )}
-
       <Grid
         container
         direction="row-reverse"
@@ -125,7 +126,6 @@ const HomePage = () => {
         }}
       >
         <Grid item xs={12} lg={5}>
-
           <Box sx={{
             mb: '42px',
           }}

@@ -4,6 +4,7 @@ import SwiperCore, { Pagination } from 'swiper';
 import 'swiper/swiper-bundle.min.css';
 import 'swiper/swiper.min.css';
 import styled from '@emotion/styled';
+import { ButtonProps } from '@mui/material';
 
 const StyledSwiper = styled(Swiper)({
   height: '700px',
@@ -11,10 +12,9 @@ const StyledSwiper = styled(Swiper)({
   maxWidth: '100vw',
   margin: '0 calc(-50vw + 50%)',
   marginBottom: '38px',
-
 });
 
-const ImageSwiper = ({ children }) => {
+const ImageSwiper: React.FC<ButtonProps> = ({ children }) => {
   SwiperCore.use([Pagination]);
   return (
     <StyledSwiper

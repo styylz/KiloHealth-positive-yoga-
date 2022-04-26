@@ -1,4 +1,5 @@
-import { createTheme } from '@mui/material/styles';
+import { createTheme, ThemeOptions } from '@mui/material/styles';
+import '@mui/material';
 
 const theme = createTheme({
   typography: {
@@ -50,7 +51,7 @@ const theme = createTheme({
       },
     },
   },
-});
+} as ThemeOptions);
 
 const defaultTheme = createTheme(theme, {
   typography: {

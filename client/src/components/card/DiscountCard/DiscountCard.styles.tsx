@@ -1,6 +1,8 @@
-import styled from '@emotion/styled';
-import { Box, Chip } from '@mui/material';
+import { Box, Chip, styled } from '@mui/material';
 
+interface DiscountCardProps {
+  myProp?: boolean;
+}
 export const DiscountChip = styled(Chip)({
   '&&': {
     minWidth: '77px',
@@ -18,8 +20,8 @@ export const DiscountChip = styled(Chip)({
 });
 
 export const DiscountCard = styled(Box, {
-  shouldForwardProp: (prop) => prop !== 'myProp',
-})(({ myProp, theme }) => ({
+  shouldForwardProp: (prop) => prop !== 'border' && prop !== 'myProp',
+})<DiscountCardProps>(({ theme, myProp }) => ({
   width: '343px',
   border: myProp ? '2px solid #FF9B4E' : '2px solid rgba(0, 0, 0, 0.08)',
   padding: '0 16px',

@@ -1,9 +1,9 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material';
-import CompaniesLogos from '../../../assets/companies-logos.png';
+import { Box, Typography, ButtonProps } from '@mui/material';
 import PrimaryButton from '../../Button/PrimaryButton/PrimaryButton';
+import CompaniesLogos from '../../../assets/companies-logos.png';
 
-const DiscountLayout = ({ children }) => (
+const DiscountLayout: React.FC<ButtonProps> = ({ children }) => (
   <Box sx={{
     marginBottom: '30px',
     width: '352px',
@@ -86,7 +86,7 @@ const DiscountLayout = ({ children }) => (
         </Typography>
       </Box>
       <Box>
-        <img alt="companies-logos" src={CompaniesLogos} />
+        <img alt="companies-logos" src={CompaniesLogos as string} />
       </Box>
     </Box>
 

@@ -1,8 +1,9 @@
 import { Box, Typography } from '@mui/material';
 import React from 'react';
 import GreenCheckMark from '../../../assets/green-checkmark.svg';
+import { Benefit } from '../../../data/constants';
 
-const Benefits = ({ title }) => (
+const Benefits: React.FC<Benefit> = ({ title }) => (
   <Box sx={{
     display: 'flex',
   }}
@@ -12,7 +13,7 @@ const Benefits = ({ title }) => (
       width: '40px',
     }}
     >
-      <img alt="checkmark-logo" src={GreenCheckMark} />
+      <img alt="checkmark-logo" src={GreenCheckMark as string} />
     </Box>
     <Box sx={{
       width: '303px',
